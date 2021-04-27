@@ -10,3 +10,11 @@ Here are some of the services:
 * [VATSIM API](https://api.vatsim.net/api/) - requires key
 
 This library initially focuses on the data feed as metar and pilot lookups are provided within that API.
+
+## Principal Components
+
+The library consists of a reader, writer, and model component.
+
+### Reader
+
+Reader uses the requests library to obtain the JSON data from the VATSIM API.  The reader will translate this into a number of formats for the Writer.  The reader will call upon the Model component 
