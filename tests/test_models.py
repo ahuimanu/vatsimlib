@@ -18,3 +18,4 @@ def test_datetime_from_iso_timestamp():
 
 	# assert
 	assert dt == datetime.fromisoformat('2021-04-27T18:39:55')
+
