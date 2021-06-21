@@ -2,6 +2,7 @@
     "python.analysis.extraPaths": [
         "."
     ],
-    "python.analysis.diagnosticMode": "workspace"
+    "python.analysis.diagnosticMode": "workspace",
+    "python.pythonPath": "/Users/jbabb/opt/miniconda3/envs/vatsimlib/bin/python3.9"
 
 }
