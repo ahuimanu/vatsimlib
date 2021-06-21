@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
-
+from typing import Optional
 
 @dataclass
 class VatsimGeneral:
@@ -54,6 +54,7 @@ class VatsimFlightPlan:
     fuel_time: str          # 0942
     remarks: str            # "PBN/A1B1C1D1L1O1S2 DOF/201128 REG/FGZNE EET/EGTT0041 EISN0102 EGGX0136 52N020W0201 CZQX0250 49N040W0344 47N050W0442 CZQM0525 KZBW0635 KZNY0727 OPR/AF PER/D RALT/EGPO LPPD CYYT RMK/TCAS SIMBRIEF /V/",
     route: str              # "EVX4H/08L EVX DCT RUBIX DCT SENLO DCT JSY DCT LIZAD DCT NAKID DCT LND M142 INSUN DCT LESLU DCT XETBO DCT LIMRI/M083F350 NATA 47N050W/N0478F350 NATA PORTI/N0470F360 N170A BRADD DCT PLYMM PARCH3"
+    # revision_id: Optional[str]        # number - not documented
 
     def __str__(self) -> str:
         return f"{self.aircraft_faa}"
