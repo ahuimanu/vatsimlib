@@ -1,5 +1,6 @@
+import json
 import requests
-from models.models import VatsimGeneral, VatsimPilot
+from models.models import VatsimGeneral, VatsimPilot, VatsimFlightPlan
 
 
 def init():
@@ -18,3 +19,13 @@ def get_vatsim_pilots(json_data):
         # https://www.w3schools.com/python/python_lists_comprehension.asp
         pilots = [p for p in json_data["pilots"] if VatsimPilot(**p)]
         return pilots
+
+def get_flight_plan_for_pilot(pilot):
+    return VatsimFlightPlan(**json.loads(pilot.flightplan))        
+
+def get_flight_plans(pilots):
+    flight_plans = [p for p in pilots if get_flight_plan_for_pilot(p)]
+    return flight_plans
+
+
+

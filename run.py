@@ -10,6 +10,9 @@ def main():
     pilots = reader.get_vatsim_pilots(json_data)
     print(f"number of pilots this update: {len(pilots)}")
 
+    flight_plans = reader.get_flight_plans(pilots)
+    print(f"number of flight plans this update: {len(flight_plans)}")
+
 
 if __name__ == "__main__":
     main()
