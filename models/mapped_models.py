@@ -23,6 +23,7 @@ mapper_registry = registry()
 
 metadata = MetaData()
 
+
 def do_mapping():
 
     # "version": 1,

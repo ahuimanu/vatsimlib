@@ -33,7 +33,7 @@ class VatsimPilot:
     heading: int  # 252
     qnh_i_hg: float  # 30.08
     qnh_mb: int  # 1019
-    flight_plan: str #json object
+    flight_plan: str  # json object
     logon_time: str  # "2020-11-28T18:43:02.8458311Z"
     last_updated: str  # "2020-11-28T22:42:59.9044667Z"
 
@@ -57,6 +57,11 @@ class VatsimFlightPlan:
 
     def __str__(self) -> str:
         return f"{self.aircraft_faa}"
+
+
+@dataclass
+class VatsimFlight:
+    pass
 
 
 @dataclass
